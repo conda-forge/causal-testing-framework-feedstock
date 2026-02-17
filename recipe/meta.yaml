@@ -1,5 +1,5 @@
 {% set name = "causal-testing-framework" %}
-{% set version = "14.0.1" %}
+{% set version = "14.1.0" %}
 {% set python_min = "3.10" %}
 {% set python_max = "3.13" %}
 
@@ -9,7 +9,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/causal_testing_framework-{{ version }}.tar.gz
-  sha256: 8e8383ec0a34fef4a1b334f5bd3128cf9fa052a5ac7e10ca86d1d0f856c38956
+  sha256: bd843d9a02f3ccff9fe028e5d7309a8dc8e80545405ba7d3b34a752b6c1b17e8
 
 build:
   noarch: python
@@ -25,12 +25,12 @@ requirements:
     - pip
   run:
     - python >={{ python_min }},<={{ python_max }}
-    - lifelines >=0.30.0,<0.31.dev0
+    - lifelines <=0.28.0
     - networkx >=3.4,<3.5
     - numpy >=1.2.6,<=2.2.0
     - pandas >=2.1
     - scikit-learn >=1.4,<2.dev0
-    - scipy >=1.12.0,<=1.16.2
+    - scipy >=1.12.0,<1.14
     - statsmodels >=0.14,<1.dev0
     - tabulate >=0.9,<1.dev0
     - pydot >=2.0,<3.dev0
