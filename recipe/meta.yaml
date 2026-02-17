@@ -1,7 +1,5 @@
 {% set name = "causal-testing-framework" %}
 {% set version = "14.1.0" %}
-{% set python_min = "3.10" %}
-{% set python_max = "3.13" %}
 
 package:
   name: {{ name|lower }}
@@ -24,7 +22,7 @@ requirements:
     - wheel
     - pip
   run:
-    - python >={{ python_min }},<={{ python_max }}
+    - python                            
     - lifelines <=0.28.0                 # [py==310]
     - lifelines >=0.30.0,<0.31.dev0      # [py>310]
     - networkx >=3.4,<3.5
