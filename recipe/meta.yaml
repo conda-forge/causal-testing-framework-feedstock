@@ -1,5 +1,5 @@
 {% set name = "causal-testing-framework" %}
-{% set version = "14.2.0" %}
+{% set version = "14.3.1" %}
 {% set python_min = "3.11" %}
 {% set python_max = "3.13" %}
 
@@ -9,7 +9,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/causal_testing_framework-{{ version }}.tar.gz
-  sha256: c1cbbca5e46145e18bfe155aa066cdd7649a47fd179109f11a3d82626e35a2e7
+  sha256: 478fbd678e2f6fcfc36f1dd4311fb6189685ce8610daf5d2cb9eab01620336bd
 
 build:
   noarch: python
