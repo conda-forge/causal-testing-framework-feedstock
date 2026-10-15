@@ -1,7 +1,7 @@
 {% set name = "causal-testing-framework" %}
-{% set version = "15.1.0" %}
-{% set python_min = "3.11" %}
-{% set python_max = "3.13" %}
+{% set version = "15.1.1" %}
+{% set python_min = "3.12" %}
+{% set python_max = "3.14" %}
 
 package:
   name: {{ name|lower }}
@@ -9,7 +9,7 @@ package:
 
 source:
   url: https://files.pythonhosted.org/packages/source/{{ name[0] }}/{{ name }}/causal_testing_framework-{{ version }}.tar.gz
-  sha256: ac74c53a12677e9f690cd3debd3fc6ee25d2cb22a61ee525b5ab4c1362568615
+  sha256: 85df210a589c4f13fc3b46d2e9c00e1d7cbd874c512302db02d83e04fe519063
 
 build:
   noarch: python
@@ -25,25 +25,22 @@ requirements:
     - pip
   run:
     - python >={{ python_min }},<={{ python_max }}
-    - bokeh >=3.9
-    - deap ~=1.4.1
+    - deap >=1.4.1,<1.5.dev0
     - fastparquet >=2024.11.0
-    - holoviews >=1.23.2
     - lifelines
     - networkx >=3.4,<3.7
     - numpy >=1.26.0,<=2.4.4
     - pandas >=2.1
     - pyarrow >=19.0.1,<25
     - pydot >=2.0
-    - pygad ~=3.3
+    - pygad >=3.3,<4.dev0
     - rustworkx >=0.18.0
-    - scikit-learn ~=1.4
+    - scikit-learn >=1.4,<2.dev0
     - scipy >=1.12.0,<=1.17.1
-    - selenium >=4.49.0
-    - statsmodels ~=0.15
-    - sympy ~=1.14.0
-    - tabulate ~=0.9
-    - tqdm ~=4.67.1
+    - statsmodels >=0.15,<1.dev0
+    - sympy >=1.14.0,<1.15.dev0
+    - tabulate >=0.9,<1.dev0
+    - tqdm >=4.67.1,<4.68.dev0
 
 test:
   imports:
